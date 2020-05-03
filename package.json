@@ -1,0 +1,28 @@
+{
+  "name": "embibetest",
+  "version": "1.0.0",
+  "description": "Simple App for Embibe's Test",
+  "scripts": {
+    "start": "ts-node ./index.ts",
+    "dev": "nodemon --watch './*.ts' --exec 'ts-node' ./index.ts",
+    "client": "cd client && yarn start",
+    "devApp": "concurrently --kill-others-on-fail \"yarn run dev\" \"yarn run client\"",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
+  },
+  "homepage": ".",
+  "author": "Anuraag",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/faker": "^4.1.11",
+    "@types/socket.io": "^2.1.4",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "ts-node": "^8.9.1"
+  }
+}
