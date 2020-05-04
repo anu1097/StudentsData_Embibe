@@ -8,7 +8,7 @@ export class Server {
   private httpServer: HTTPServer;
   private app: Application;
 
-  private readonly DEFAULT_PORT = 8080;
+  private readonly DEFAULT_PORT = process.env.PORT as unknown as number || 8080;
 
   constructor() {
     this.initialize();

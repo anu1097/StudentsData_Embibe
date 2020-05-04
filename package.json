@@ -7,7 +7,8 @@
     "dev": "nodemon --watch './*.ts' --exec 'ts-node' ./index.ts",
     "client": "cd client && yarn start",
     "devApp": "concurrently --kill-others-on-fail \"yarn run dev\" \"yarn run client\"",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "heroku-prebuild": "npm install",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "homepage": ".",
   "author": "Anuraag",
