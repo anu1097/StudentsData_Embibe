@@ -44,7 +44,7 @@ export default class Dashboard extends React.Component<any, any> {
 
   onScroll = () => {
     if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500)) {
-      if (!this.state.reachedBottom) {
+      if (!this.state.reachedBottom && !this.state.isSearchActive) {
         this.setState({
           reachedBottom: true
         })
@@ -59,8 +59,13 @@ export default class Dashboard extends React.Component<any, any> {
       let res = data.studentName.toLowerCase().includes(e.target.value.toLowerCase());
       return res;
     });
+    let isSearchActive = false;
+    if (e.target.value !== '') {
+      isSearchActive = true;
+    }
     this.setState({
-      studentInfo: studentInfo
+      studentInfo: studentInfo,
+      isSearchActive
     })
   }
 
