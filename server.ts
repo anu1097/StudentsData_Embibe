@@ -23,7 +23,7 @@ export class Server {
   }
 
   private configureApp(): void {
-    this.app.use(express.static(path.join(__dirname, "/client/build", "index.html")));
+    this.app.use(express.static(path.join(__dirname, "/client/build")));
   }
 
   private configureRoutes(): void {
