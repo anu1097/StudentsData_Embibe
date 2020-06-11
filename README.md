@@ -1,27 +1,39 @@
 This is created as part of Hackathon Challenge for Embibe- 
+You can find it working here - http://embibe-test-101.herokuapp.com/
 
 Requirements - 
 
 STUDENT LOGIN (Mandatory)
 Create a login screen for first time login users.
-STUDENT DASHBOARD
+STUDENT DASHBOARD -
 ● Load the student's data from this API - https://api.myjson.com/bins/1dlper and show loading screen
 when data is being loaded
+
 ● After the data is loaded, show the Dashboard using the data.
+
 ● Dashboard Schematics
+
 a. It will be a grid of cards with each card representing one individual student.
+
 b. Each card will show the name, total marks and id of the student it represents.
+
 c. Each row of the grid will have 3 cards if device is desktop, 2 cards if device is tablet and 1
 card if it is mobile. (Responsive)
+
 d. Enable Infinite Scrolling for the same.
+
 e. There will be a fixed header on the top of the page which will have a search bar and 2 buttons
 in the same row.
+
 f. When user types into the search bar, only students whose name starts with the input string
 are shown in the grid, the rest are hidden.
+
 g. The first Button will toggle the order of the students between alphabetical and
 reverse-alphabetical order of name.
+
 h. The second Button will toggle the order of the students between increasing and decreasing
 order of total marks.
+
 i. Clicking on a card will take the user to the details page where all the details of the student will
 be shown. The url should reflect the id of the student. Eg. http://localhost:5050/55 (student
 with id 55)
